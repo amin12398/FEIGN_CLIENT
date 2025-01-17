@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: SERVICE-CLIENT
+  cloud:
+    consul:
+      host: localhost       # Consul agent host
+      port: 8500            # Consul agent port
+      discovery:
+        enabled: true       # Enable Consul service discovery

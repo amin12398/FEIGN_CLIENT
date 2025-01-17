@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: GateWay
+  cloud:
+    consul:
+      host: localhost       # Consul agent host
+      port: 8500            # Consul agent port
+      discovery:
+        enabled: true       # Enable Consul service discovery
+        service-name: gateway-service # Explicit service name for registration
+        healthCheckPath: /actuator/health # Health check path for Consul
+        healthCheckInterval: 10s         # Optional: Interval for health checks
